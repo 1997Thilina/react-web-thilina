@@ -1,9 +1,9 @@
 
 import React from 'react';
-import {Dimensions, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Dimensions, ScrollView, StyleSheet, View} from 'react-native';
 import LandingPage from './components/landing-page/landing-page';
-import SimpleMenu from './components/menu-component/menu-component';
 import NavBar from './components/navBar-component/navBar-component';
+import SkillsAndAboutMe from './components/about-me-page/about-me-page';
 
 //import SimpleMenu from './components/menu-component/menu-component';
 
@@ -12,14 +12,16 @@ const {height} = Dimensions.get('screen');
 const App = () => {
   return (
     <View style={styles.container}>
-      <View style = {styles.navContainer}>
-      <NavBar title="My App" buttons={['Button 1', 'Button 2', 'Button 3', 'Button 4', 'Button 5']} />
-      </View>
-      <ScrollView style={styles.container}>
-        <SimpleMenu></SimpleMenu>
-        <LandingPage></LandingPage>
+      
+      <NavBar title="" buttons={['Button 1', 'Button 2', 'Button 3', 'Button 4', 'Button 5']} />
+      
+      
+      <ScrollView style={styles.container} >
         
-        <Text>Hello React Native Web!!!</Text>
+        <LandingPage></LandingPage>
+        <SkillsAndAboutMe></SkillsAndAboutMe>
+        
+        
       </ScrollView>
       
     </View>
@@ -28,6 +30,9 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: '#FFF',
     height,
   },
   center: {

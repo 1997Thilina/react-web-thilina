@@ -29,16 +29,19 @@ const styles = StyleSheet.create({
     flex:1,
     flexDirection: 'row',
     width:'100%',
+    //height:50,
 
     
     //justifyContent: 'space-between',
     //alignItems: 'center',
-    paddingVertical: 10,
+    paddingVertical: 5,
     paddingHorizontal: 20,
-    borderBottomWidth: 1,
-    borderColor: '#ccc'
+    //borderBottomWidth: 2,
+    
+    //borderColor: '#ccc'
   },
   leftButtons: {
+    flex:1,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     paddingVertical: 5,
@@ -48,7 +51,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     height:35,
-    backgroundColor: '#007BFF',
+    backgroundColor: '#FFF',
     borderRadius: 5,
   },
   titleContainer: {
@@ -62,10 +65,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   buttonText: {
-    color: '#FFF',
+    color: '#666',
     fontSize: 15,
     fontWeight: 'bold',
   },
+  
 });
 
 export default NavBar;
