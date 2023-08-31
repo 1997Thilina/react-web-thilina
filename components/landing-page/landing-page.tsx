@@ -1,16 +1,18 @@
+// @ts-nocheck
+
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
-import ims from '../../assets/profile.png'
+import ims from '../../assets/1680719239716.jpg'
 import background1 from '../../assets/background1.jpg'
 
 interface LandingPageProps {}
 
 const LandingPage: React.FC<LandingPageProps> = () => {
-  const screenWidth = Dimensions.get('window').width;
-  const isWideScreen = screenWidth > 500;
+  //const screenWidth = Dimensions.get('window').width;
+  //const isWideScreen = screenWidth > 500;
 
   return (
-    <View style={[styles.container, { flexDirection: isWideScreen ? "row" : "column"}]}>
+    <View style={styles.container}>  
       
       <Image
           source={{ uri: background1 }}
@@ -40,8 +42,8 @@ const LandingPage: React.FC<LandingPageProps> = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    //flexDirection: 'row',
+    flexWrap: 'wrap' ,
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 100,
@@ -50,7 +52,7 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     ...StyleSheet.absoluteFillObject, // Fill the entire container
-    opacity: 0.7, // Adjust the opacity as needed
+    opacity: 0.75, // Adjust the opacity as needed
     borderRadius: 10,
   },
   textContainer: {
@@ -58,14 +60,15 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
-    paddingLeft: 100,
-    marginEnd: 20,
+    //paddingLeft: 100,
+    marginEnd: 30,
+    marginBottom:40
   },
   imageContainer: {
-    flex: 1,
-    justifyContent: 'flex-start',
+    flexWrap: 'wrap' ,
+    justifyContent: 'center',
     alignItems: 'center',
-    //marginStart: 20,
+    //margintop: 20,
   },
   logo: {
     marginBottom: 20,

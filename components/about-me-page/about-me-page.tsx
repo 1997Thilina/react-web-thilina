@@ -8,7 +8,7 @@ const SkillsAndAboutMe: React.FC = () => {
         <View style={styles.aboutMeContainer}>
         <Text style={styles.heading}>About Me</Text>
         <Text style={styles.aboutMeText}>
-          I am a passionate software developer with a strong foundation in programming and a keen interest in mobile app development. Currently pursuing a degree in Electronics and Information Technology, I am dedicated to expanding my knowledge and skills to deliver innovative solutions. My collaborative spirit and adaptability enable me to contribute effectively to diverse teams. I thrive on challenges, embracing continuous learning, and leveraging mistakes as stepping stones to growth.
+          I am a passionate software and web developer with a strong foundation in programming and a keen interest in mobile app development. Currently pursuing a degree in Electronics and Information Technology, I am dedicated to expanding my knowledge and skills to deliver innovative solutions. My collaborative spirit and adaptability enable me to contribute effectively to diverse teams. I thrive on challenges, embracing continuous learning, and leveraging mistakes as stepping stones to growth.
         </Text>
       </View>
       <View style={styles.skillsContainer}>
@@ -28,14 +28,14 @@ const SkillsAndAboutMe: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexWrap: 'wrap',
     flexDirection:"row",
     padding: 20,
     marginTop:20
   },
   skillsContainer: {
     margin: 20,
-    width:"50%",
+    width:"40%",
     padding:50,
     //justifyContent:'center',
     alignItems:'flex-start'

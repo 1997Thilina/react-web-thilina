@@ -4,6 +4,9 @@ import {Dimensions, ScrollView, StyleSheet, View} from 'react-native';
 import LandingPage from './components/landing-page/landing-page';
 import NavBar from './components/navBar-component/navBar-component';
 import SkillsAndAboutMe from './components/about-me-page/about-me-page';
+import ProjectsPage from './components/project-page/project-page';
+//import ContactMeSection from './components/contact-page/contact-page';
+import ContactsPage from './components/contact-page/contact-page';
 
 //import SimpleMenu from './components/menu-component/menu-component';
 
@@ -13,14 +16,15 @@ const App = () => {
   return (
     <View style={styles.container}>
       
-      <NavBar title="" buttons={['Button 1', 'Button 2', 'Button 3', 'Button 4', 'Button 5']} />
+      <NavBar title="" buttons={['Home', 'About me', 'My works', 'contact me']} />
       
       
       <ScrollView style={styles.container} >
         
         <LandingPage></LandingPage>
         <SkillsAndAboutMe></SkillsAndAboutMe>
-        
+        <ProjectsPage></ProjectsPage>
+        <ContactsPage></ContactsPage>
         
       </ScrollView>
       
@@ -29,6 +33,7 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
+  
   container: {
     flex: 1,
     flexDirection: 'column',

@@ -8,7 +8,8 @@
     "web": "cd web && webpack-dev-server",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack --config web/webpack.config.js"
   },
   "dependencies": {
     "@types/react-native": "^0.72.2",
