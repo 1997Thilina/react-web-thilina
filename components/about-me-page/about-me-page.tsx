@@ -14,11 +14,11 @@ const SkillsAndAboutMe: React.FC = () => {
       <View style={styles.skillsContainer}>
         <Text style={styles.heading}>Skills</Text>
         <Text style={styles.skillsText}>
-          - Programming Languages:  JavaScript, Java, Typescript, Python
+          - Programming Languages: Java,JavaScript, Typescript, Python, C, PHP
           {"\n"}- Frontend Development:  React Native, HTML, CSS
           {"\n"}- Database:  MySQL, Firebase
-          {"\n"}- Other:  IOT, NodeMcu, AVR C
-          {"\n"}- Tools:  Git, GitHub, jira
+          {"\n"}- Other:  IOT, NodeMcu, SPSS, AVR C
+          {"\n"}- Tools:  Git, GitHub, android studio, jira
         </Text>
       </View>
       

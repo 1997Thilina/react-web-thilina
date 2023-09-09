@@ -1,53 +1,104 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, Linking ,TouchableOpacity} from 'react-native';
+import gitIcon from '../../assets/github.jpg'
 
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  refLink:string;
+  imageSource: any; // Replace with actual image source
+}
 
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description,refLink, imageSource }) => {
+  
+  const handleImageClick = () => {
 
-const SimpleMenu: React.FC = () => {
+    Linking.openURL(refLink);
+  };
   return (
-    <View>
-      <View style={styles.container}>
-      <TouchableOpacity style={styles.buttonStyle} >
-            <Text style={styles.buttonText}>About</Text>
-         </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonStyle}>
-          <Text style={styles.buttonText}>About</Text>
+    <View style={styles.card}>
+      <Image source={{ uri: imageSource }} style={styles.image} resizeMode="cover" />
+      <View style={styles.headContent}>
+        <View style={styles.titleContainer}>
+        <Text style={styles.title}>{title}</Text>
+
+        </View>
+        <View style={styles.imageContainer}>
+        <TouchableOpacity onPress={handleImageClick}>
+        <Image
+          source={{uri:gitIcon}}
+          style={styles.gitImage}
+        />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonStyle}>
-          <Text style={styles.buttonText}>Projects</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.buttonStyle}>
-          <Text>Contact</Text>
-        </TouchableOpacity>
+
+        </View>
+        
+      </View>
+
+      <View style={styles.cardContent}>
+      <Text style={styles.description}>{description}</Text>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-    buttonStyle: {
-        backgroundColor: '#007BFF',
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        borderRadius: 5,
-       // marginRight:50,
-        marginTop:10
-        
-      },
-      buttonText: {
-        color: '#FFF',
-        fontSize: 16,
-        fontWeight: 'bold',
-        
-      
+  card: {
+    backgroundColor: '#FFF',
+    //flex:1,
+    //flexDirection:'column',
+    borderRadius: 10,
+    height:270,
+    width:300,
+    elevation: 3,
+    shadowRadius:10,
+    marginBottom: 40,
   },
-  container: {
-    flex: 1,
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    flexDirection: 'row',
-    width: '100%',
+  image: {
+    ...StyleSheet.absoluteFillObject, // Fill the entire container
+    opacity: 0.4, // Adjust the opacity as needed
+    borderRadius: 10,
+  },
+  headContent: {
+    padding: 10,
+    paddingRight:1,
+    flex:1,
+    flexDirection:'row',
+    
+  },
+  imageContainer: {
+    padding: 5,
+    //justifyContent:'flex-end'
+    //flex:1,
+    //flexDirection:'row'
+  },
+  titleContainer: {
+    padding: 5,
+    width:'70%'
+    //flex:1,
+    //flexDirection:'row'
+  },
+  gitImage: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    
+  }, 
+  cardContent: {
+    padding: 15,
+    flex:4,
+    //flexDirection:'row'
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+
+  },
+  description: {
+    fontSize: 13,
+    //color: '#666',
   },
 });
 
-export default SimpleMenu;
+export default ProjectCard;

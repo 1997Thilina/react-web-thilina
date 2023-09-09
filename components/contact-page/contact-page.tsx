@@ -1,25 +1,31 @@
 import React from 'react';
-import { View, StyleSheet, Image,Text } from 'react-native';
-import project1 from '../../assets/project1.jpg';
-import project2 from '../../assets/project2.jpg';
-import project3 from '../../assets/project3.jpg';
-import ftImage from '../../assets/i.jpg';
+import { View, StyleSheet, Image, Text } from 'react-native';
+import lnkdin from '../../assets/linkedin.png';
+import fb from '../../assets/facebook.png';
+import github from '../../assets/github.jpg';
+import ftImage from '../../assets/footer5.jpg';
+import wapp from '../../assets/whatsapp.png';
 import ContactTags from '../contact-tags/contact-tags';
 
 
 const ContactsPage: React.FC = () => {
   const contLinks = [
+    
     {
       refLink:'https://github.com/1997Thilina/react-web-thilina/tree/dev',
-      imageSource: project1, // Replace with actual image source
+      imageSource: wapp, // Replace with actual image source
+    },
+    {
+      refLink:'https://github.com/1997Thilina/react-web-thilina/tree/dev',
+      imageSource: fb, // Replace with actual image source
     },
     {
       refLink:'https://github.com/1997Thilina/iot-smart-plug',
-      imageSource: project2, // Replace with actual image source
+      imageSource: lnkdin, // Replace with actual image source
     },
     {
         refLink:'https://github.com/1997Thilina/smart-fall-detector-atmega32-',
-        imageSource: project3, // Replace with actual image source
+        imageSource: github, // Replace with actual image source
     },
     
     // Add more project objects here
@@ -30,12 +36,9 @@ const ContactsPage: React.FC = () => {
         <Image
           source={{ uri: ftImage }}
           style={[styles.footerImage]}
-          //resizeMode="stretch"
+          resizeMode='stretch'
         />
-        <View style={styles.Holder}>
 
-        <Text style={styles.text}>Contact me</Text>
-        
         
         
         <View style={styles.contactHolder}>
@@ -50,7 +53,8 @@ const ContactsPage: React.FC = () => {
         ))}
         
         </View>
-        </View>
+        <Text style={styles.subtitle}>@2023 Thilina Munasingha</Text>
+        
     
     </View>
   );
@@ -58,48 +62,46 @@ const ContactsPage: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
-    marginTop:50,
-    //flexWrap:'wrap-reverse' ,
-    flexDirection:"row",
-    justifyContent:"space-evenly",
-    width:'100%',
-    //height:100,
-    //alignContent:'flex-start'
-  },
-  Holder:{
-    padding: 10,
-    
-    flex:1 ,
+    flex:0.2,
+    paddingBottom:20,
+    marginTop:80,
     flexDirection:"column",
-    justifyContent:"center",
-    alignItems:'center'
-
+    //justifyContent:"space-evenly",
+    width:'100%',
+    alignItems:'center',
+    
   },
+
 
   contactHolder:{
     padding: 5,
-    marginTop:100,
+    marginTop:10,
     flex:1 ,
     flexDirection:"row",
     justifyContent:"center",
     width:'100%',
-    height:20,
+    //height:20,
 
   },
   footerImage: {
     ...StyleSheet.absoluteFillObject, // Fill the entire container
     opacity: 0.75, // Adjust the opacity as needed
-    borderRadius: 10,
+    borderRadius: 5,
     
   },
   text:{
     
     fontSize: 24,
     fontWeight: 'bold',
-    paddingBottom: 10,
+    textAlign:'center',
+    //paddingBottom: 10,
     //marginLeft:80,
     color:'#084155'
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#000',
+    //marginBottom: 20,
   },
 });
 

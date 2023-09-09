@@ -1,12 +1,14 @@
-import React from 'react';
-import { ScrollView, StyleSheet, View,Text } from 'react-native';
+
+import React  from 'react';
+import {  StyleSheet, View,Text } from 'react-native';
 import ProjectCard from '../project-card/project-card'; // Import the ProjectCard component
 import project1 from '../../assets/project1.jpg';
 import project2 from '../../assets/project2.jpg';
 import project3 from '../../assets/project3.jpg';
 
+interface ProjectPageProps {}
 
-const ProjectsPage: React.FC = () => {
+const ProjectsPage: React.FC<ProjectPageProps>= () => {
   const projects = [
     {
       title: 'Portfolio website',
@@ -37,7 +39,7 @@ const ProjectsPage: React.FC = () => {
   ];
 
   return (
-    <ScrollView contentContainerStyle={styles.container1}>
+    <View style={styles.container1} >
       <Text style={styles.heading}>My Works</Text>
       <View style={styles.container}>
       {projects.map((project, index) => (
@@ -50,14 +52,14 @@ const ProjectsPage: React.FC = () => {
         />
       ))}
       </View>
-    </ScrollView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    marginBottom:100,
+    marginBottom:80,
     flexWrap: 'wrap' ,
     flexDirection:"row",
     justifyContent:"space-evenly",

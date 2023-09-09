@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     width:300,
     elevation: 3,
     shadowRadius:10,
-    marginBottom: 20,
+    marginBottom: 40,
   },
   image: {
     ...StyleSheet.absoluteFillObject, // Fill the entire container
