@@ -9,22 +9,23 @@ import ContactTags from '../contact-tags/contact-tags';
 
 
 const ContactsPage: React.FC = () => {
+  
   const contLinks = [
     
     {
-      refLink:'https://github.com/1997Thilina/react-web-thilina/tree/dev',
+      refLink:'https://wa.me/94771129694',
       imageSource: wapp, // Replace with actual image source
     },
     {
-      refLink:'https://github.com/1997Thilina/react-web-thilina/tree/dev',
+      refLink:'#',
       imageSource: fb, // Replace with actual image source
     },
     {
-      refLink:'https://github.com/1997Thilina/iot-smart-plug',
+      refLink:'https://www.linkedin.com/in/thilina-munasingha-uoc/',
       imageSource: lnkdin, // Replace with actual image source
     },
     {
-        refLink:'https://github.com/1997Thilina/smart-fall-detector-atmega32-',
+        refLink:'https://github.com/1997Thilina/',
         imageSource: github, // Replace with actual image source
     },
     
@@ -69,6 +70,7 @@ const styles = StyleSheet.create({
     //justifyContent:"space-evenly",
     width:'100%',
     alignItems:'center',
+    maxHeight:110,
     
   },
 
@@ -85,8 +87,9 @@ const styles = StyleSheet.create({
   },
   footerImage: {
     ...StyleSheet.absoluteFillObject, // Fill the entire container
-    opacity: 0.75, // Adjust the opacity as needed
+    opacity: 0, // Adjust the opacity as needed
     borderRadius: 5,
+    shadowOpacity:5
     
   },
   text:{

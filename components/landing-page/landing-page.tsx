@@ -3,7 +3,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
 import ims from '../../assets/1680719239716.jpg'
-import background1 from '../../assets/background1.jpg'
+import background1 from '../../assets/footer2.jpg'
 
 interface LandingPageProps {}
 
@@ -54,14 +54,16 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject, // Fill the entire container
     opacity: 0.75, // Adjust the opacity as needed
     borderRadius: 10,
+    shadowOpacity:2
   },
   textContainer: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
-    //paddingLeft: 100,
+    marginTop:10,
     marginEnd: 30,
+    minWidth:250,
     marginBottom:40
   },
   imageContainer: {

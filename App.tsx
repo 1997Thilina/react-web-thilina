@@ -1,19 +1,18 @@
 ////@ts-nocheck
 import React , { useRef} from 'react';
-import {Dimensions, ScrollView,  StyleSheet, View} from 'react-native';
+import {Dimensions, ScrollView,  StyleSheet,ImageBackground, View} from 'react-native';
 import LandingPage from './components/landing-page/landing-page';
 import NavBar from './components/navBar-component/navBar-component';
 import SkillsAndAboutMe from './components/about-me-page/about-me-page';
 import ProjectsPage from './components/project-page/project-page';
 //import ContactMeSection from './components/contact-page/contact-page';
 import ContactsPage from './components/contact-page/contact-page';
-//import SmoothScrollView from 'react-native-smooth-scroll-view';
-
+//import bgi from 'https://www.w3schools.com/images/background_in_space.gif';
+import bgi from './assets/bgi.jpg'
 
 import ContactForm from './components/emailMe-page/emailMe-page';
 
 const {height} = Dimensions.get('screen');
-
 const App = () => {
   console.log(height);
 
@@ -23,13 +22,17 @@ const App = () => {
   const section3Ref = useRef<View | null>(null);
   const section4Ref = useRef<View | null>(null);
   return (
-    <View style={styles.container}   >
-      
-      <View>
+    <ScrollView style={styles.container}  >
+      <ImageBackground
+          source={{ uri: bgi }}
+          style={[styles.backgroundImage]}
+          //resizeMode="contain"
+        />
+       
        <NavBar title=""
           buttons={['Home', 'About me', 'My works', 'contact me']} sectionRefs={[section1Ref,section2Ref,section3Ref,section4Ref]} scrollViewRef={scrollViewRef} />
-      </View>
-      <ScrollView style={styles.center} ref={scrollViewRef}>
+      
+      <ScrollView style={styles.center}  ref={scrollViewRef} showsVerticalScrollIndicator={false}>
      
       
       
@@ -48,7 +51,7 @@ const App = () => {
 
      
       
-    </View>
+    </ScrollView>
   );
 };
 
@@ -56,11 +59,12 @@ const styles = StyleSheet.create({
   
   container: {
     
-    //flex: 1,
+    
     //justifyContent: 'center',
     //alignItems: 'center',
     backgroundColor: '#FFF',
-    height:660,
+    //height:height,
+    
   },
   center: {
     //flexWrap: 'wrap',
@@ -68,9 +72,15 @@ const styles = StyleSheet.create({
     //alignItems: 'center',
     //backgroundColor: '#FFF',
     //margin:1,
-    //height:height,
+    height:height,
     //height:
   },
+  backgroundImage: {
+    ...StyleSheet.absoluteFillObject, // Fill the entire container
+    opacity: 0.7, // Adjust the opacity as needed
+    //borderRadius: 10,
+  },
+
   
 
 

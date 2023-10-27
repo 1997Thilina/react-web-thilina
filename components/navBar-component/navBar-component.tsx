@@ -56,10 +56,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     padding: 10,
-    backgroundColor:'#FFF',
-    //justifyContent: windowWidth >= 768 ? 'space-between':'space-evenly',
+    //backgroundColor:'#fff',
     alignItems:'center',
     height:55,
+    //position:'absolute'
+   
   },
   leftButtons: {
     flex:1 ,
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   buttonText: {
-    color: '#666',
+    color: '#004d66',
     fontSize: 15,
     fontWeight: 'bold',
   },

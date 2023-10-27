@@ -53,11 +53,13 @@ const styles = StyleSheet.create({
     elevation: 3,
     shadowRadius:10,
     marginBottom: 40,
+    marginHorizontal:10,
   },
   image: {
     ...StyleSheet.absoluteFillObject, // Fill the entire container
     opacity: 0.4, // Adjust the opacity as needed
     borderRadius: 10,
+    shadowOpacity:5
   },
   headContent: {
     padding: 10,

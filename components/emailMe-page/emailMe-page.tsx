@@ -56,9 +56,9 @@ const ContactForm = () => {
                         style={[styles.icon]}
                         //resizeMode='stretch'
                     />
-                    <Text style={styles.label}> Giravkahena
-                    {"\n"} Kalugala Road
-                    {"\n"} Baduraliya</Text>
+                    <Text style={styles.label}> Baduraliya
+                    
+                    {"\n"} Sri Lanka</Text>
 
                 </View>
 
@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         width: 300,
         height: 400,
+        minWidth:280,
         marginBottom:20,
 
     },
